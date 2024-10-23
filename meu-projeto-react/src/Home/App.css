@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* App Container */
+.App {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+.App-header {
+  background-color: #011D42;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 10px 20px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.App-logo {
+  width: 50px;
+  height: auto;
+}
+
+.logo-container span {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  color: #fff;
+}
+
+/* Navigation */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+  color: #FFD700;
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  width: 100%;
+  min-height: calc(100vh - 180px); /* Compensa header e footer */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Footer */
+footer {
+  background-color: #011D42;
+  padding: 20px;
+  width: 100%;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-left: 50px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+  margin-left: 50px ;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #000;
+  padding: 25px;
+}
+
+.footer-bottom p {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Animation for Logo */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .App-header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .footer-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container span {
+    font-size: 1.2rem;
+  }
+
+  .nav-list li a {
+    font-size: 0.9rem;
+  }
+
+  .footer-section ul li {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+}
+.custom-link {
+  color: #FFD700; /* Cor dourada para o link */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  font-weight: bold; /* Deixa o texto em negrito */
+  transition: color 0.3s ease; /* Animação suave na mudança de cor */
+}
+
+.custom-link:hover {
+  color: #FFF700; /* Cor ao passar o mouse */
+}
+
+.custom-link:active, 
+.custom-link:visited {
+  color: #FFD700; /* Mantém a cor original quando o link for clicado */
+}
